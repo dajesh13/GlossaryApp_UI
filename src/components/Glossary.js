@@ -38,10 +38,10 @@ const Glossary = () => {
         axios.get('/glossary/getGlossary')
             .then((result) => {
                 setData(result.data);
-                console.log(result)
+
             })
             .catch((error) => {
-                console.log(error)
+        
             })
     }
     const handleEdit = (termId) => {
@@ -51,10 +51,9 @@ const Glossary = () => {
                 setEditTerm(result.data.glossaryTerm);
                 setEditDefinition(result.data.definition.glossaryDefinition);
                 setEditId(termId);
-                console.log(termId);
             })
             .catch((error) => {
-                console.log(error)
+
             })
         
     }
@@ -66,7 +65,7 @@ const Glossary = () => {
                         glossaryData();
                     }
                 })
-            console.log(termId);
+
         }
     }
     const handleUpdate = () => {

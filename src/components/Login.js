@@ -26,7 +26,6 @@ const Login = () => {
             }
             axios.post(url, data)
                 .then((result) => {
-                    console.log(result);  
                     if(result.data['authToken'] != null) 
                     {
                         axios.defaults.headers.common = {'Authorization': `bearer ${result.data['authToken']}`}
